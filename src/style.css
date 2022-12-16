@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap');
 
-
 :root {
   --font-weight: 300;
   --font: 'Poppins', sans-serif;
 }
-
 
 * {
   padding: 0;
@@ -48,7 +46,6 @@ header {
 
 .todo h2 {
   margin: 0;
-  margin-left: 20px;
   align-items: center;
   color: #545862;
   font-size: 18px;
@@ -121,6 +118,7 @@ button {
   border: none;
   background: none;
 }
+
 .ctn-icon {
   transition: 0.6s;
   display: flex;
@@ -131,6 +129,7 @@ button {
   padding-right: 20px;
   cursor: pointer;
 }
+
 .return {
   transition: 0.6s;
   color: #9797a5;
@@ -184,7 +183,7 @@ button {
   cursor: pointer;
 }
 
-#author{
+#author {
   position: absolute;
   bottom: 0;
   left: 0;
