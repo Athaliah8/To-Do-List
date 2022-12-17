@@ -62,6 +62,7 @@ After you're finished please remove all the comments and instructions!
 - CSS
 - JavaScript (ES6)
 - Webpack
+-Linters
 
 <!-- Features -->
 
@@ -69,7 +70,8 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[ Add and Remove Books]**
+- **[ Add and Remove list tasks ]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
