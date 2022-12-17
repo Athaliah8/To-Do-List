@@ -19,7 +19,7 @@ module.exports = {
         ],
 
   module: {
-    rules: [ 
+    rules: [
       {
         test: /\.(?:ico│gif│pngVjpeg)$/i,
         type: 'asset/resource',
