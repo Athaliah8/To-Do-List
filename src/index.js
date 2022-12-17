@@ -1,62 +1,59 @@
-const toDoList = [
-  {
-    description: 'Wash Dishes',
-    completed: true,
-    index: 0,
-  },
-
-  {
-    description: 'Go to the Gym',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'Cook dinner',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Complete Project',
-    completed: false,
-    index: 3,
-  },
-];
-
-const listSection = document.querySelector('.items');
-listSection.innerHTML = '';
-for (let i = 0; i < toDoList.length; i += 1) {
-  const work = toDoList[i];
-  let workItem = `
-    <li class=" list-items">`;
-  if (work.completed) {
-    workItem += `<span class="material-icons done" onclick="updateStatus(${work.index}, 'pending')">
-          done
-        </span>
-        <p contenteditable="true" class="completed">
-          ${work.description}
-        </p>
-        `;
-  } else {
-    workItem += `<span class="material-icons check-box" onClick ="UpdateStatus(${work.index}, 'completed')">
-                check_box_outline_blank
-                </span>
-                <p  contenteditable="true">
-                ${work.description}
-                </P>`;
-  }
-  workItem += `
-  <span class="material-icons more-bars">
-       more_vert
-    </span>
-   <!-- <span class="material-icons" onclick="deleteTask(${work.index})">
-        delete
-      </span> -->
-   </li>`;
-  listSection.innerHTML += workItem;
+/* eslint-disable no-unused-vars */
+/* eslint func-names: ["error", "never", { "generators": "always" }] */
+const myNodelist = document.getElementsByTagName('LI');
+let i;
+/* eslint-disable-next-line no-plusplus */
+for (i = 0; i < myNodelist.length; i++) {
+  const span = document.createElement('SPAN');
+  const txt = document.createTextNode('\u00D7');
+  span.className = 'close';
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
 }
 
-toDoList.sort((a, b) => {
-  if (a.index < b.index) return -1;
-  if (a.index > b.index) return 1;
-  return 0;
-});
+const close = document.getElementsByClassName('close');
+/* eslint-disable-next-line no-plusplus */
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function () {
+    const div = this.parentElement;
+    div.style.display = 'none';
+  };
+}
+
+const list = document.querySelector('ul');
+list.addEventListener('click', (ev) => {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+function newElement() {
+  const li = document.createElement('li');
+  const inputValue = document.getElementById('myInput').value;
+  const t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert('You must write something!');
+  } else {
+    document.getElementById('myUL').appendChild(li);
+  }
+  document.getElementById('myInput').value = '';
+
+  const span = document.createElement('SPAN');
+  const txt = document.createTextNode('\u00D7');
+  span.className = 'close';
+  span.appendChild(txt);
+  li.appendChild(span);
+  /* eslint-disable-next-line no-plusplus */
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+      const div = this.parentElement;
+      div.style.display = 'none';
+    };
+  }
+}
+
+function removeAll() {
+  const lst = document.getElementsByTagName('ul');
+  lst[0].innerHTML = '';
+}
