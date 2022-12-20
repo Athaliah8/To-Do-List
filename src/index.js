@@ -1,4 +1,8 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable max-classes-per-file */
+
 const ul = document.getElementById('list');
+let msg;
 let li;
 const addButton = document.getElementById('add');
 addButton.addEventListener('click', addItem);
@@ -10,6 +14,8 @@ function addItem() {
   if (item === '') {
     msg = 'Enter your Task';
     alert(msg);
+    return true;
+
     return false;
   }
   li = document.createElement('li');
