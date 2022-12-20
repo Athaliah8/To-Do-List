@@ -1,39 +1,39 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimal to-do-list</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script
     src="https://kit.fontawesome.com/9d6e6aaa13.js"
     crossorigin="anonymous"
   ></script>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css">
+    <title>Minimal To-Do-List</title>
+</head>
+<body>
+  <main>
+    <div id="container">
+        <div class="controls">
+            <h1>My Awesome To-do</h1>
+            <input type="text" name="" id="input" placeholder="Add your list here..."><br>
+            <button type="button" id="add"> <i class="fa-solid fa-arrow-turn-down"></i></button>  
+           
+        </div>
+        <ul id="list">
+            <li class="mycheck"><input type="checkbox" id="check"><label >
+				Go to Gym</label></li>
+            <li class="mycheck"><input type="checkbox" id="check"><label >
+				Go Jogging</label></li>
+            <li class="mycheck"><input type="checkbox" id="check"><label >
+				Learn JavaScript</label></li>
+        </ul>
+        <button type="button" id="remove">Clear all Completed Task</button> 
 
-    <div class="header">
-      <h1>To Do List</h1>
-      <hr>
-      <input type="text" id="myInput" placeholder="Add your list here...">
-      <span onclick="newElement()" class="addBtn">
-        <i class="fa-solid fa-arrow-turn-down"></i>
-      </span>
     </div>
-
-    <ul id="myUL">
-    </ul>
-    <div>
-    <button type="button" id="clear-list" onclick="removeAll()"> Clear all completed</button>
-    </div>
-
-
+  </main>
     <footer id="author">
       <p>Made with ❤️ By Athaliah Tauro</p>
     </footer>
-
-
-    <script type="text/javascript" src="./index.js"></script>
-
-  </body>
+    <script src="./index.js"></script>
+</body>
 </html>

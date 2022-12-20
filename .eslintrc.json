@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 {
   "env": {
     "browser": true,
@@ -10,6 +9,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
+
   "extends": ["airbnb-base"],
   "rules": {
     "no-shadow": "off",

@@ -1,129 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap');
+
+:root {
+  --font-weight: 300;
+  --font: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin: 10px auto;
-  min-width: 250px;
-  max-width: 50%;
-  background-color: rgb(219, 212, 212);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-ul {
   margin: 0;
-  padding: 0;
+  background-color: white;
+  font-family: var(--font);
+  font-weight: var(--font-weight);
 }
 
-ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 12px 8px 12px 40px;
-  list-style-type: none;
-  background: #eee;
-  font-size: 18px;
-  transition: 0.2s;
-
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Set zebra-stripes: all odd list items to a different color */
-ul li:nth-child(odd) {
-  background: #f9f9f9;
-}
-
-ul li:hover {
-  background: #ddd;
-}
-
-ul li.checked {
-  background: rgb(85, 255, 51);
-  color: white;
-  text-decoration: line-through;
-}
-
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-/* Style the close button */
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: crimson;
-  color: white;
-}
-
-.header {
-  background-color: #fff;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #333;
-  letter-spacing: 1.5px;
-}
-
-.header::after {
-  content: "";
-  display: table;
-  clear: both;
+main {
+  text-align: center;
+  padding-top: 50px;
 }
 
 h1 {
-  margin: 0;
-  align-items: center;
-  color: #545862;
+  font-style: normal;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#container {
+  width: 35vw;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 3px 5px 1px grey;
+}
+
+#container ul {
+  margin-top: 50px;
+  padding-left: 0;
+}
+
+#container ul li {
+  list-style: none;
+  text-align: left;
+}
+
+#container ul li label {
+  margin: 0 auto;
+  vertical-align: middle;
+  height: 100%;
+  line-height: 40px;
   font-size: 18px;
-  font-weight: 400;
-  padding: 1rem;
-  line-height: 20px;
-  width: calc(100% - 2rem);
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
-input {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
+#container ul li #check {
   float: left;
-  font-size: 16px;
-  font-style: italic;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  -webkit-appearance: none;
+  border: 2px solid #b5c5dd;
+  position: relative;
+  outline: 0;
 }
 
-.addBtn {
-  padding: 10px;
-  width: 25%;
-  color: #555;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
+#container ul li #check:checked::after {
+  content: '\2714';
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 7px;
+  color: black;
 }
 
-#clear-list {
+#container ul li input[type='checkbox']:checked + label {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+#container .controls {
+  margin: auto;
+}
+
+#container .controls #input {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#container .controls #input:focus {
+  outline: 0;
+}
+
+.ctn-icon {
+  display: flex;
+  width: 15px;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+#remove {
   display: flex;
   width: 100%;
   text-align: center;
