@@ -1,19 +1,19 @@
 import './style.css';
-import List from './list.js';
+import Page from './info.js';
 
-const todolist = new List();
-todolist.display();
+const todotask = new Page();
+todotask.display();
 
-document.querySelector('#form-area').addEventListener('submit', (e) => {
+document.querySelector('#form-sector').addEventListener('submit', (e) => {
   e.preventDefault();
   const activity = e.target.elements.activity.value;
-  todolist.addWork(activity);
+  todotask.addWork(activity);
   e.target.reset();
 });
-document.querySelector('.complete-items').addEventListener('click', () => {
-  todolist.clearCompletedActivity();
+document.querySelector('.clear-all').addEventListener('click', () => {
+  todotask.clearCompletedActivity();
 });
 
 document.querySelector('#delete-all').addEventListener('click', () => {
-  todolist.clearAll();
+  todotask.clearAll();
 });

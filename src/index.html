@@ -5,26 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <title> Minimal To-do-list</title>
+    <title> Minimal  | To-do-list</title>
+    <script
+    src="https://kit.fontawesome.com/9d6e6aaa13.js"
+    crossorigin="anonymous"
+  ></script>
     <link rel="stylesheet" href="./style.css">
   </head>
 
   <body>
     <main>
-      <section class="todolist">
+      <section class="list-section">
         <header class="todo">
           <h2>Today's To Do</h2>
           <span class="material-icons new-item" id="delete-all">
-            autorenew
+            <i class="fa-solid fa-arrows-rotate"></i>
+            
           </span>
         </header>
-        <section class="input-field">
+        <section class="data-input">
           <div>
-            <form action="#" id="form-area">
-              <input type="text" name="activity" id="add-item" placeholder="Add your list here...">
+            <form action="#" id="form-sector">
+              <input type="text" name="activity" id="enter" placeholder="Add your list items here...">
               <button type="submit">
                 <span class="material-icons return">
-                  keyboard_return
+                  <i class="fa-solid fa-arrow-turn-down"></i>
                 </span>
               </button>
             </form>
@@ -35,7 +40,7 @@
           </div>
         </section>
         <footer id="footer">
-          <div class="complete-items">
+          <div class="clear-all">
             Clear all completed
           </div>
         </footer>

@@ -1,6 +1,6 @@
-class List {
+class Page {
   constructor() {
-    this.list = JSON.parse(localStorage.getItem('todolist'));
+    this.list = JSON.parse(localStorage.getItem('list-section'));
     if (!this.list) {
       this.list = [];
     }
@@ -43,7 +43,6 @@ class List {
     this.activateActions();
   }
 
-  // add new activity
   addWork(work) {
     if (work || work === 0) {
       const newWork = {
@@ -93,7 +92,7 @@ class List {
       if (a.index > b.index) return 1;
       return 0;
     });
-    localStorage.setItem('todolist', JSON.stringify(this.list));
+    localStorage.setItem('list-section', JSON.stringify(this.list));
   }
 
   editActivity(index, description) {
@@ -131,4 +130,4 @@ class List {
   }
 }
 
-export default List;
+export default Page;
