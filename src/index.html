@@ -1,39 +1,51 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script
-    src="https://kit.fontawesome.com/9d6e6aaa13.js"
-    crossorigin="anonymous"
-  ></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Minimal To-Do-List</title>
-</head>
-<body>
-  <main>
-    <div id="container">
-        <div class="controls">
-            <h1>My Awesome To-do</h1>
-            <input type="text" name="" id="input" placeholder="Add your list here..."><br>
-            <button type="button" id="add"> <i class="fa-solid fa-arrow-turn-down"></i></button>  
-           
-        </div>
-        <ul id="list">
-            <li class="mycheck"><input type="checkbox" id="check"><label >
-				Go to Gym</label></li>
-            <li class="mycheck"><input type="checkbox" id="check"><label >
-				Go Jogging</label></li>
-            <li class="mycheck"><input type="checkbox" id="check"><label >
-				Learn JavaScript</label></li>
-        </ul>
-        <button type="button" id="remove">Clear all Completed Task</button> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <title> Minimal To-do-list</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
 
-    </div>
-  </main>
-    <footer id="author">
+  <body>
+    <main>
+      <section class="todolist">
+        <header class="todo">
+          <h2>Today's To Do</h2>
+          <span class="material-icons new-item" id="delete-all">
+            autorenew
+          </span>
+        </header>
+        <section class="input-field">
+          <div>
+            <form action="#" id="form-area">
+              <input type="text" name="activity" id="add-item" placeholder="Add your list here...">
+              <button type="submit">
+                <span class="material-icons return">
+                  keyboard_return
+                </span>
+              </button>
+            </form>
+          </div>
+          <div>
+            <ul class="items">
+            </ul>
+          </div>
+        </section>
+        <footer id="footer">
+          <div class="complete-items">
+            Clear all completed
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <div id="author">
       <p>Made with ❤️ By Athaliah Tauro</p>
-    </footer>
-    <script src="./index.js"></script>
-</body>
+    </div>
+
+    <script type="module"  src="./index.js"></script>
+  </body>
 </html>
